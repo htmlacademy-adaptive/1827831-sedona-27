@@ -2,10 +2,6 @@
   text-align: left;
 }
 
-.advice__item-row {
-  display: flex;
-}
-
 .advice__item-dummy {
   width: 82px;
   background-color: transparent;
@@ -33,17 +29,25 @@
   padding: 23px 18px;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .advice__list {
     width: 768px;
     display: grid;
     grid-template-columns: repeat(3, 256px);
   }
+}
 
-  .advice__item-row {
-    display: block;
-    text-align: center;
+@media (min-width: 1200px) {
+  .advice__list {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
   }
+}
+
+.advice__item-row {
+  display: block;
+  text-align: center;
 }
 
 .advice__title {

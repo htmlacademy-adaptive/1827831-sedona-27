@@ -35,11 +35,15 @@ p {
   margin-inline-end: 0;
 }
 
-@media (max-width: 767px) {
+.rectangle {
+  background-image: url("../img/rectangle.svg");
+  width: 320px;
+  height: 37px;
+  transform: translate(0, 17px);
+}
+
+@media (min-width: 321px) and (max-width: 1200px) {
   .rectangle {
-    background-image: url("../img/rectangle.svg");
-    width: 320px;
-    height: 37px;
-    transform: translate(0, 17px);
+    display: none;
   }
 }

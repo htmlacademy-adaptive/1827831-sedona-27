@@ -5,10 +5,27 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .main-footer {
-    width: 768px;
     display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 647px;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    align-items: center;
   }
 }
 
