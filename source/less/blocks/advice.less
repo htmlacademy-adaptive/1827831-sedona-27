@@ -33,6 +33,19 @@
   padding: 23px 18px;
 }
 
+@media (min-width: @tablet-width) {
+  .advice__list {
+    width: 768px;
+    display: grid;
+    grid-template-columns: repeat(3, 256px);
+  }
+
+  .advice__item-row {
+    display: block;
+    text-align: center;
+  }
+}
+
 .advice__title {
   list-style-type: none;
   font-weight: 700;

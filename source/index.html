@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,13 +15,22 @@
     <button class="main-header__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
+
+    <nav class="main-header__navigation">
+      <ul class="main-header__navigation-menu">
+        <li class="main-header__navigation-section">Главная</li>
+        <li class="main-header__navigation-section">ФОТО И ВИДЕО</li>
+        <li class="main-header__navigation-section main-header__navigation-section-margin">Форма отзыва</li>
+        <li class="main-header__navigation-section">HTML ACADEMY</li>
+      </ul>
+    </nav>
   </div>
 </header>
 <main class="main-container">
   <div class="main__container-container">
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <div class="main-image">
-      <img src="./img/text-main-banner.svg" width="282" height="214" alt="Седона.">
+      <img src="./img/text-main-banner.svg" width="282" height="214" alt="Седона." class="main-image-letter">
     </div>
     <div class="slogan">
       <p class="slogan__title">СЕДОНА — небольшой городок <br>в АРИЗОНЕ, заслуживающий большего!</p>
@@ -30,6 +40,7 @@
     <ul class="advantage">
       <li class="advantage__section">
         <h2 class="visually-hidden">Наши преимущества</h2>
+        <div class="advantage__section-block">
         <div class="advantage__wrapper">
           <h3 class="advantage__section-title advantage__section-title-white">НАСТОЯЩИЙ ГОРОДОК</h3>
           <p class="advantage__section-number advantage__section-number-white">— №1 —</p>
@@ -37,10 +48,10 @@
             ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
         </div>
         <img src="./img/hotel-image-mobile.jpg" width="320" height="260" alt="Фото отеля." class="advantage__section-img">
-
+        </div>
         <div class="advice">
           <ul class="advice__list">
-            <li class="advice__item advice__item--house">
+            <li class="advice__item advice__item&#45;&#45;house">
               <div class="advice__item-row">
                 <img src="../../img/icon-house.svg" width="40" height="40" alt="Дом.">
                 <h3 class="advice__title">
@@ -52,7 +63,7 @@
                 <p class="advice__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </div>
             </li>
-            <li class="advice__item advice__item--food">
+            <li class="advice__item advice__item&#45;&#45;food">
               <div class="advice__item-row">
                 <img src="../../img/icon-burger.svg" width="40" height="40" alt="Еда.">
                 <h3 class="advice__title">
@@ -64,7 +75,7 @@
                 <p class="advice__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
               </div>
             </li>
-            <li class="advice__item advice__item--souvenir">
+            <li class="advice__item advice__item&#45;&#45;souvenir">
               <div class="advice__item-row">
                 <img src="../../img/icon-gift.svg" alt="Сувениры." class="advice__item-img">
                 <h3 class="advice__title">

@@ -9,8 +9,38 @@
   padding: 18px 54px;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .advantage__wrapper {
+    width: 256px;
+    height: 256px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantage__wrapper {
+    text-align: center;
+    background-color: #81b3d2;
+    padding: 18px 54px;
+    width: 400px;
+    height: 256px;
+  }
+}
+
 .advantage__section {
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage__section {
+    width: 768px;
+    display: grid;
+    grid-template-columns: repeat(3, 256px);
+  }
+
+  .advantage__section-title {
+    display: block;
+    text-align: center;
+  }
 }
 
 .advantage__section-background {
