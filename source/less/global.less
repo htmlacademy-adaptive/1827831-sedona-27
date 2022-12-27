@@ -24,8 +24,20 @@
 }
 
 .page__body {
-  margin: 0;
+  margin: 0 auto;
   font-family: "PT Sans", sans-serif;
+}
+
+@media (min-width: @tablet-width) {
+  .page__body {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body {
+    width: 1200px;
+  }
 }
 
 p {
@@ -42,7 +54,7 @@ p {
   transform: translate(0, 17px);
 }
 
-@media (min-width: 321px) and (max-width: 1200px) {
+@media (min-width: 321px) and (max-width: 1500px) {
   .rectangle {
     display: none;
   }

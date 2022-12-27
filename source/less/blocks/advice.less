@@ -29,7 +29,7 @@
   padding: 23px 18px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: @tablet-width) and (max-width: 1199px) {
   .advice__list {
     width: 768px;
     display: grid;
@@ -37,9 +37,9 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .advice__list {
-    width: 1200px;
+    width: @desktop-width;
     display: grid;
     grid-template-columns: repeat(3, 400px);
   }

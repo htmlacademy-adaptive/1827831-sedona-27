@@ -1,0 +1,33 @@
+.main-image {
+  background: url("../img/background-image.png") no-repeat center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 125px;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .main-image {
+    background: url("../../img/main-image-tablet.png") no-repeat center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-image {
+    background-image: url("../img/main-image-desktop.png");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .main-image-letter {
+    width: 460px;
+    height: 349px;
+  }
+}

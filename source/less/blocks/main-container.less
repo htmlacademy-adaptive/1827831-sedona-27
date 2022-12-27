@@ -4,41 +4,7 @@
   width: 100%;
 }
 
-.main-image {
-  background: url("../../img/background-image.png") no-repeat center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 125px;
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .main-image {
-    background: url("../../img/main-image-tablet.png") no-repeat center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 1200px) {
-  .main-image {
-    background-image: url("../img/main-image-desktop.png");
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .main-image-letter {
-    width: 460px;
-    height: 349px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .map__img {
     background-image: url("../source/img/map-tablet.png");
     width: 768px;
@@ -46,10 +12,10 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .map__img {
     background-image: url("../source/img/map-desktop.png");
-    width: 1200px;
+    width: @desktop-width;
     height: 350px;
   }
 }

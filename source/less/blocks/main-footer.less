@@ -5,13 +5,13 @@
   width: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .main-footer {
     display: flex;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .main-footer__wrapper {
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .main-footer__wrapper {
     display: flex;
     justify-content: space-between;
