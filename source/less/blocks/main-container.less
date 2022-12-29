@@ -4,11 +4,18 @@
   width: 100%;
 }
 
-.main-image {
-  background-image: url("../../img/main-image-mobile.jpg");
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 125px;
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .map__img {
+    background-image: url("../source/img/map-tablet.png");
+    width: 768px;
+    height: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__img {
+    background-image: url("../source/img/map-desktop.png");
+    width: @desktop-width;
+    height: 350px;
+  }
 }

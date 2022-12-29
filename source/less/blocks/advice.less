@@ -2,10 +2,6 @@
   text-align: left;
 }
 
-.advice__item-row {
-  display: flex;
-}
-
 .advice__item-dummy {
   width: 82px;
   background-color: transparent;
@@ -31,6 +27,27 @@
   text-align: center;
   list-style-type: none;
   padding: 23px 18px;
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .advice__list {
+    width: 768px;
+    display: grid;
+    grid-template-columns: repeat(3, 256px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advice__list {
+    width: @desktop-width;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+  }
+}
+
+.advice__item-row {
+  display: block;
+  text-align: center;
 }
 
 .advice__title {

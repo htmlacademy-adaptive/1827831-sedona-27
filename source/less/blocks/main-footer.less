@@ -5,6 +5,29 @@
   width: 100%;
 }
 
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .main-footer {
+    display: flex;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 647px;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    align-items: center;
+  }
+}
 
 .main-footer__copyright {
   font-weight: 400;
