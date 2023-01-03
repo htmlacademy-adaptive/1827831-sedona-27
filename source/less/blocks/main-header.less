@@ -51,12 +51,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-header__mobile-menu {
-    display: none;
-  }
-}
-
-@media (min-width: @tablet-width) {
   .main-header__toggle {
     display: none;
   }
@@ -108,7 +102,6 @@
 }
 
 .main-header__mobile-menu {
-  display: block;
   position: absolute;
   width: 100%;
   background-color: @blue;
@@ -116,6 +109,12 @@
   top: 0;
   left: 0;
   color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__mobile-menu {
+    display: none;
+  }
 }
 
 .main-header__mobile-menu li {
@@ -137,11 +136,11 @@
 }
 
 .main-header__mobile-section:hover {
-  background-color: #669EC0;
+  background-color: #669ec0;
 }
 
 .main-header__mobile-section:active {
-  background-color: #669EC0;
+  background-color: #669ec0;
   opacity: 0.3;
 }
 
@@ -209,64 +208,3 @@
   color: #ffffff;
 }
 
-let navMain
-
-=
-document.querySelector
-
-(
-'.main-nav'
-)
-;
-let navToggle
-
-=
-document.querySelector
-
-(
-'.main-nav__toggle'
-)
-;
-
-navMain.classList.remove
-
-(
-'main-nav--nojs'
-)
-;
-
-navToggle.addEventListener
-
-(
-'click'
-,
-function
-
-(
-)
-{
-  if (navMain.classList .contains('main-nav--closed')
-)
-{
-navMain.classList.remove
-
-(
-'main-nav--closed'
-)
-;
-navMain.classList.add
-
-(
-'main-nav--opened'
-)
-;
-}
-else {
-  navMain.classList.add('main-nav--closed');
-
-  navMain.classList.remove('main-nav--opened');
-}
-
-}
-)
-;
