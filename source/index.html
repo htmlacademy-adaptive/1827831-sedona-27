@@ -16,12 +16,27 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
 
+    <nav class="main-header__mobile-menu main-nav--nojs">
+      <ul class="main-header__mobile-item">
+        <li class="main-header__mobile-section">
+          <a href="#" class="main-header__mobile-link">Главная</a>
+          <div class="main-header__mobile-button"><img src="./img/icon-cross.svg" width="22" height="22" alt="Кнопка закрытия.">
+          </div>
+        </li>
+        <li class="main-header__mobile-section"><a href="#" class="main-header__mobile-link">Фото и видео</a></li>
+        <li class="main-header__mobile-section"><a href="#" class="main-header__mobile-link">Форма отзыва</a></li>
+        <li class="main-header__mobile-section main-header__mobile-section-shadow"><a href="#" class="main-header__mobile-link">HTML ACADEMY</a></li>
+      </ul>
+    </nav>
+
     <nav class="main-header__navigation">
       <ul class="main-header__navigation-menu">
         <li class="main-header__navigation-section"><a href="#" class="main-header__navigation-link">Главная</a></li>
-        <li class="main-header__navigation-section"><a href="#" class="main-header__navigation-link">ФОТО И ВИДЕО</a></li>
+        <li class="main-header__navigation-section"><a href="#" class="main-header__navigation-link">ФОТО И ВИДЕО</a>
+        </li>
         <li class="main-header__navigation-section main-header__navigation-section-margin"><a href="#" class="main-header__navigation-link">Форма отзыва</a></li>
-        <li class="main-header__navigation-section"><a href="#" class="main-header__navigation-link">HTML ACADEMY</a></li>
+        <li class="main-header__navigation-section"><a href="#" class="main-header__navigation-link">HTML ACADEMY</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -41,13 +56,14 @@
       <li class="advantage__section">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="advantage__section-block">
-        <div class="advantage__wrapper">
-          <h3 class="advantage__section-title advantage__section-title-white">НАСТОЯЩИЙ ГОРОДОК</h3>
-          <p class="advantage__section-number advantage__section-number-white">— №1 —</p>
-          <p class="advantage__section-description advantage__section-description-white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ
-            ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
-        </div>
-        <img src="./img/hotel-image-mobile.jpg" width="320" height="260" alt="Фото отеля." class="advantage__section-img">
+          <div class="advantage__wrapper">
+            <h3 class="advantage__section-title advantage__section-title-white">НАСТОЯЩИЙ ГОРОДОК</h3>
+            <p class="advantage__section-number advantage__section-number-white">— №1 —</p>
+            <p class="advantage__section-description advantage__section-description-white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ
+              ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+          </div>
+          <img src="./img/hotel-image-mobile.jpg" width="320" height="260" alt="Фото отеля."
+               class="advantage__section-img">
         </div>
         <div class="advice">
           <ul class="advice__list">
@@ -98,7 +114,8 @@
           <p class="advantage__section-description advantage__section-description-white">Да, по нему можно пройти! Если
             вы осмелитесь, конечно</p>
         </div>
-        <img src="./img/bridge-image-mobile.jpg" width="320" height="260" alt="Фото моста." class="advantage__section-img">
+        <img src="./img/bridge-image-mobile.jpg" width="320" height="260" alt="Фото моста."
+             class="advantage__section-img">
       </li>
 
       <li class="advantage__section advantage__section-background advantage__section-grey-background">
@@ -136,7 +153,13 @@
         <a class="action__search button" href="#">Найти Гостиницу</a>
       </div>
       <div class="map">
-        <img src="./img/map-mobile-image.jpg" width="320" height="350" alt="Найти на карте." class="map__img">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+          allowfullscreen
+          class="map__img"
+          title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+        </iframe>
       </div>
     </section>
   </div>

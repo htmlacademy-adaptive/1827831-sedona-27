@@ -4,9 +4,15 @@
   width: 100%;
 }
 
+.map__img {
+  border: none;
+  display: block;
+  width: 320px;
+  height: 350px;
+}
+
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .map__img {
-    background-image: url("../source/img/map-tablet.png");
     width: 768px;
     height: 350px;
   }
@@ -14,8 +20,12 @@
 
 @media (min-width: @desktop-width) {
   .map__img {
-    background-image: url("../source/img/map-desktop.png");
-    width: @desktop-width;
+    width: 1200px;
     height: 350px;
   }
+}
+
+.map {
+  top: 0;
+  left: auto;
 }
