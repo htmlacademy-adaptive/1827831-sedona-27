@@ -55,7 +55,7 @@ p {
   transform: translate(0, 17px);
 }
 
-@media (min-width: 321px) and (max-width: 1500px) {
+@media (min-width: 321px) {
   .rectangle {
     display: none;
   }
@@ -63,4 +63,10 @@ p {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  br {
+    display: none;
+  }
 }
