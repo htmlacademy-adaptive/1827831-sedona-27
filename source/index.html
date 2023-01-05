@@ -12,39 +12,30 @@
     <img src="./img/logo-phone.svg" width="185" height="96" alt="Логотип Седона." class="main-header__logo-image">
   </a>
   <div class="main-header__container">
-    <button id="menu-button-open" class="main-header__toggle" type="button">
+    <button id="header-menu-button" class="main-header__button main-button--nojs" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <nav id="mobile-menu" class="hidden main-header__mobile-menu main-nav--nojs">
-      <ul class="main-header__mobile-item">
-        <li class="main-header__mobile-section">
-          <a href="#" class="main-header__mobile-link">Главная</a>
-          <div  id="menu-button-close" class="main-header__mobile-button">
-            <img src="./img/icon-cross.svg" width="22" height="22" alt="Кнопка закрытия.">
-          </div>
+    <nav id="header-menu" class="main-header__menu main-nav--nojs hidden">
+      <ul class="main-header__item">
+        <li class="main-header__section">
+          <a href="#" class="main-header__link">
+            Главная
+          </a>
         </li>
-        <li class="main-header__mobile-section">
-          <a href="#" class="main-header__mobile-link">Фото и видео</a>
+        <li class="main-header__section">
+          <a href="#" class="main-header__link">
+            Фото и видео
+          </a>
         </li>
-        <li class="main-header__mobile-section">
-          <a href="#" class="main-header__mobile-link">Форма отзыва</a>
+        <li class="main-header__section main-header__navigation-section-margin">
+          <a href="#" class="main-header__link">
+            Форма отзыва
+          </a>
         </li>
-        <li class="main-header__mobile-section main-header__mobile-section-shadow">
-          <a href="#" class="main-header__mobile-link">HTML ACADEMY</a>
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="main-header__navigation">
-      <ul class="main-header__navigation-menu">
-        <li class="main-header__navigation-section">
-          <a href="#" class="main-header__navigation-link">Главная</a>
-        </li>
-        <li class="main-header__navigation-section">
-          <a href="#" class="main-header__navigation-link">ФОТО И ВИДЕО</a>
-        </li>
-        <li class="main-header__navigation-section main-header__navigation-section-margin"><a href="#" class="main-header__navigation-link">Форма отзыва</a></li>
-        <li class="main-header__navigation-section"><a href="#" class="main-header__navigation-link">HTML ACADEMY</a>
+        <li class="main-header__section">
+          <a href="#" class="main-header__link">
+            HTML ACADEMY
+          </a>
         </li>
       </ul>
     </nav>
