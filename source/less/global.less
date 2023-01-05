@@ -37,6 +37,7 @@
 @media (min-width: @desktop-width) {
   .page__body {
     width: 1200px;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   }
 }
 
@@ -54,8 +55,18 @@ p {
   transform: translate(0, 17px);
 }
 
-@media (min-width: 321px) and (max-width: 1500px) {
+@media (min-width: 321px) {
   .rectangle {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  br {
     display: none;
   }
 }

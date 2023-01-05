@@ -16,6 +16,7 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
+  padding-top: 38px;
 }
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
@@ -31,7 +32,7 @@
   text-transform: uppercase;
   color: #333333;
   text-align: center;
-  padding-bottom: 32px;
+  padding: 21px 18px 32px 18px;
 }
 
 .action__search {
@@ -46,6 +47,19 @@
   width: 284px;
   text-align: center;
   margin-bottom: 49px;
+}
+
+.action__search:hover {
+  background-color: @hover-blue;
+}
+
+.action__search:active {
+  background-color: @hover-blue;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.action__search:disabled {
+  background-color: #e5e5e5;
 }
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {

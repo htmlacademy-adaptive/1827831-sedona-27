@@ -1,12 +1,6 @@
 .social__list {
   display: flex;
-  padding: 0 0 40px 0;
-}
-
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
-  .social__list {
-    padding: 0;
-  }
+  padding: 0;
 }
 
 .social__item {
@@ -18,10 +12,34 @@
   .social-link();
 }
 
+.social__link--vkontakte:hover {
+  background-color: @hover-blue;
+}
+
+.social__link--vkontakte:active {
+  background-color: @active-blue;
+}
+
 .social__link--telegram {
   .social-link();
 }
 
+.social__link--telegram:hover {
+  background-color: @hover-blue;
+}
+
+.social__link--telegram:active {
+  background-color: @active-blue;
+}
+
 .social__link--youtube {
   .social-link();
+}
+
+.social__link--youtube:hover {
+  background-color: @hover-blue;
+}
+
+.social__link--youtube:active {
+  background-color: @active-blue;
 }
