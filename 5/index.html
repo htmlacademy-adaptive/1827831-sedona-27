@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="./js/index.js" defer></script>
   <base href="https://htmlacademy-adaptive.github.io/1827831-sedona-27/5/">
 </head>
 <body class="page__body">
@@ -14,39 +13,30 @@
     <img src="./img/logo-phone.svg" width="185" height="96" alt="Логотип Седона." class="main-header__logo-image">
   </a>
   <div class="main-header__container">
-    <button id="menu-button-open" class="main-header__toggle" type="button">
+    <button id="header-menu-button" class="main-header__button main-button--nojs" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <nav id="mobile-menu" class="hidden main-header__mobile-menu main-nav--nojs">
-      <ul class="main-header__mobile-item">
-        <li class="main-header__mobile-section">
-          <a href="#" class="main-header__mobile-link">Главная</a>
-          <div  id="menu-button-close" class="main-header__mobile-button">
-            <img src="./img/icon-cross.svg" width="22" height="22" alt="Кнопка закрытия.">
-          </div>
+    <nav id="header-menu" class="main-header__menu main-nav--nojs hidden">
+      <ul class="main-header__item">
+        <li class="main-header__section">
+          <a href="#" class="main-header__link">
+            Главная
+          </a>
         </li>
-        <li class="main-header__mobile-section">
-          <a href="#" class="main-header__mobile-link">Фото и видео</a>
+        <li class="main-header__section">
+          <a href="#" class="main-header__link">
+            Фото и видео
+          </a>
         </li>
-        <li class="main-header__mobile-section">
-          <a href="#" class="main-header__mobile-link">Форма отзыва</a>
+        <li class="main-header__section main-header__navigation-section-margin">
+          <a href="#" class="main-header__link">
+            Форма отзыва
+          </a>
         </li>
-        <li class="main-header__mobile-section main-header__mobile-section-shadow">
-          <a href="#" class="main-header__mobile-link">HTML ACADEMY</a>
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="main-header__navigation">
-      <ul class="main-header__navigation-menu">
-        <li class="main-header__navigation-section">
-          <a href="#" class="main-header__navigation-link">Главная</a>
-        </li>
-        <li class="main-header__navigation-section">
-          <a href="#" class="main-header__navigation-link">ФОТО И ВИДЕО</a>
-        </li>
-        <li class="main-header__navigation-section main-header__navigation-section-margin"><a href="#" class="main-header__navigation-link">Форма отзыва</a></li>
-        <li class="main-header__navigation-section"><a href="#" class="main-header__navigation-link">HTML ACADEMY</a>
+        <li class="main-header__section">
+          <a href="#" class="main-header__link">
+            HTML ACADEMY
+          </a>
         </li>
       </ul>
     </nav>
@@ -68,10 +58,10 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="advantage__section-block">
           <div class="advantage__wrapper">
-            <h3 class="advantage__section-title advantage__section-title-white">НАСТОЯЩИЙ ГОРОДОК</h3>
+            <h3 class="advantage__section-title advantage__section-title-white">НАСТОЯЩИЙ <br>ГОРОДОК</h3>
             <p class="advantage__section-number advantage__section-number-white">— №1 —</p>
             <p class="advantage__section-description advantage__section-description-white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ
-              ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+              ТУРИСТОВ, <br>ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
           </div>
           <img src="./img/hotel-image-mobile.jpg" width="320" height="260" alt="Фото отеля." class="advantage__section-img">
         </div>
@@ -86,7 +76,7 @@
               </div>
               <div class="advice__item-row">
                 <div class="advice__item-dummy"></div>
-                <p class="advice__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                <p class="advice__description">Рекомендуем пожить в настоящем мотеле, <br>все как в кино!</p>
               </div>
             </li>
             <li class="advice__item advice__item-food">
@@ -98,7 +88,7 @@
               </div>
               <div class="advice__item-row">
                 <div class="advice__item-dummy"></div>
-                <p class="advice__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                <p class="advice__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, <br>Вы НЕ разочаруетесь!</p>
               </div>
             </li>
             <li class="advice__item advice__item-souvenir">
@@ -110,21 +100,23 @@
               </div>
               <div class="advice__item-row">
                 <div class="advice__item-dummy"></div>
-                <p class="advice__description">Не только китайского, но и местного производства!</p>
+                <p class="advice__description">Не только китайского, <br>но и местного производства!</p>
               </div>
             </li>
           </ul>
         </div>
       </li>
       <li class="advantage__section advantage__section-second">
+
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="advantage__wrapper">
-          <h3 class="advantage__section-title advantage__section-title-white">ТАМ ЕСТЬ Мост дьявола</h3>
+          <h3 class="advantage__section-title advantage__section-title-white">ТАМ ЕСТЬ <br>Мост дьявола</h3>
           <p class="advantage__section-number advantage__section-number-white">— №2 —</p>
-          <p class="advantage__section-description advantage__section-description-white">Да, по нему можно пройти! Если
+          <p class="advantage__section-description advantage__section-description-white">Да, по нему можно пройти! <br>Если
             вы осмелитесь, конечно</p>
         </div>
         <img src="./img/bridge-image-mobile.jpg" width="320" height="260" alt="Фото моста." class="advantage__section-img">
+
       </li>
 
       <li class="advantage__section advantage__section-background advantage__section-grey-background">
@@ -132,7 +124,7 @@
         <h3 class="advantage__section-title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
         <p class="advantage__section-number">— №3 —</p>
         <p class="advantage__section-description advantage__section-description-line">ВСЕ интересные места находятся
-          очень близко</p>
+          очень <br>близко</p>
         <div class="advantage__section-line"></div>
       </li>
       <li class="advantage__section advantage__section-background advantage__section-grey-background">
@@ -140,7 +132,7 @@
         <h3 class="advantage__section-title">КРАСИВАЯ ДОРОГА</h3>
         <p class="advantage__section-number">— №4 —</p>
         <p class="advantage__section-description advantage__section-description-line">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА
-          совсем НЕ СКУЧНО!</p>
+          совсем <br>НЕ СКУЧНО!</p>
         <div class="advantage__section-line"></div>
       </li>
 
@@ -149,8 +141,9 @@
         <h3 class="advantage__section-title">МАЛО ТУРИСТОВ</h3>
         <p class="advantage__section-number">— №5 —</p>
         <p class="advantage__section-description advantage__section-description-padding">Большинство едет в гранд каньон
-          и толпится там</p>
+          и <br>толпится там</p>
       </li>
+
     </ul>
     <section class="action">
       <div class="action__wrapper">
@@ -209,5 +202,6 @@
     </div>
   </div>
 </footer>
+<script src="./js/index.js" defer></script>
 </body>
 </html>
