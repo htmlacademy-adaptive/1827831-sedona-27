@@ -35,9 +35,15 @@
   width: 100%;
 }
 
+.advantage__section-second {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .advantage__section-second {
-    display: flex;
+    flex-direction: row-reverse;
   }
 
   .advantage__section-title {
@@ -48,7 +54,7 @@
 
 @media (min-width: @desktop-width) {
   .advantage__section-second {
-    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -148,24 +154,64 @@
   padding: 24px 0;
 }
 
+.advantage-img {
+  position: relative;
+  flex-grow: 1;
+  min-height: 256px;
+}
+
+.advantage-img img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.advantage__section-img-bridge {
+  //height: 260px;
+  object-fit: contain;
+  position: absolute;
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .advantage__section-img-bridge {
+    //height: 256px;
+    order: 1;
+    object-fit: contain;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bridge-image-2x.jpg");
+    background-size: 800px auto;
+  }
+}
+
 .advantage__section-img {
   width: 100%;
+  height: 256px;
+  object-fit: contain;
 }
 
 @media (min-width: @tablet-width) and (max-width: 1199px) {
   .advantage__section-img {
-    background-image: url("../img/hotel-image-tablet.png");
     width: 512px;
     height: 256px;
-    order: 1;
+    object-fit: contain;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantage__section-img {
-    background-image: url("../img/hotel-image-desktop.png");
     width: 800px;
     height: 256px;
+    object-fit: contain;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-city2x.jpg");
+    background-size: 800px auto;
   }
 }
 
@@ -180,5 +226,3 @@
     display: flex;
   }
 }
-
-
