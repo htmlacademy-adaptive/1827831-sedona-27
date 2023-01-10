@@ -208,20 +208,14 @@
     object-fit: contain;
   }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/photo-city2x.jpg");
-    background-size: 800px auto;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    .advantage__section-block {
+      display: flex;
+    }
   }
-}
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
-  .advantage__section-block {
-    display: flex;
+  @media (min-width: @desktop-width) {
+    .advantage__section-block {
+      display: flex;
+    }
   }
-}
-
-@media (min-width: @desktop-width) {
-  .advantage__section-block {
-    display: flex;
-  }
-}
