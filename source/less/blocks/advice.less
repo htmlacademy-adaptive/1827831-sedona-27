@@ -26,7 +26,6 @@
 .advice__list {
   text-align: center;
   list-style-type: none;
-  padding: 67px 0;
 }
 
 @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -42,11 +41,13 @@
     width: @desktop-width;
     display: grid;
     grid-template-columns: repeat(3, 400px);
+    padding: 67px 0;
   }
 }
 
 .advice__item-row {
   display: flex;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
