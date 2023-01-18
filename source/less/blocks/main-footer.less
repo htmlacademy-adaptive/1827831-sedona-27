@@ -40,6 +40,7 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
+  text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -75,6 +76,13 @@
   color: #000000;
 }
 
-.main-footer__copyright:hover {
+.main-footer__copyright:hover .main-footer__copyright-img,
+.main-footer__copyright:hover .main-footer__copyright-text {
   color: #81b3d2;
+}
+
+.main-footer__copyright-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }

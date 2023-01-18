@@ -78,6 +78,17 @@
   margin: 0;
   padding: 0 15px;
   width: 100%;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.advantage__section-background:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: @desktop-width) {
+  .advantage__section-background {
+    border-bottom: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -142,11 +153,6 @@
 
 .advantage__section-description-white {
   color: #ffffff;
-}
-
-.advantage__section-description-line {
-  border-bottom: 1px solid #d6d6d6;
-  padding: 24px 0;
 }
 
 @media (max-width: @mobile-width-only) {

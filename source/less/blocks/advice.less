@@ -26,6 +26,7 @@
 .advice__list {
   text-align: center;
   list-style-type: none;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -82,5 +83,22 @@
   .advice__tablet-size {
     width: 80px;
     height: 72px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .advice-list {
+    padding: 0;
+  }
+
+  .advice__item-row {
+    position: relative;
+    padding-left: 65px;
+  }
+
+  .advice__tablet-size {
+    position: absolute;
+    left: 18px;
+    top: 13px;
   }
 }
