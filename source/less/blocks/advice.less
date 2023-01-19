@@ -3,6 +3,12 @@
   padding-top: 13px;
 }
 
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .advice__item {
+    padding-top: 57px;
+  }
+}
+
 .advice__item-img {
   padding-right: 8px;
 }
@@ -69,7 +75,9 @@
 }
 
 @media (min-width: @tablet-width) {
-  font-size: 21px;
+  .advice__title {
+    font-size: 21px;
+  }
 }
 
 .advice__description {
@@ -77,6 +85,13 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .advice__description {
+    padding-left: 39px;
+    width: 213px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -102,5 +117,3 @@
     top: 13px;
   }
 }
-
-

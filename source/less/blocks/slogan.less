@@ -12,10 +12,24 @@
   padding-top: 32px;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) and (max-width: 1199px) {
   .slogan__title {
     font-size: 21px;
-    padding-top: 59px;
+    padding-top: 48px;
+    width: 620px;
+    padding-left: 145px;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slogan__title {
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 60px;
   }
 }
 

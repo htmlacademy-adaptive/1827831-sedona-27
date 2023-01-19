@@ -23,6 +23,7 @@
   .action__title {
     font-size: 30px;
     line-height: 26px;
+    padding-top: 34px;
   }
 }
 
@@ -76,5 +77,21 @@
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .action__search {
     width: 458px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .action__title {
+    padding-bottom: 10px;
+  }
+
+  .action__description {
+    padding: 0;
+    margin-bottom: 26px;
+    width: 398px;
+  }
+
+  .action__search {
+    margin-bottom: 58px;
   }
 }
