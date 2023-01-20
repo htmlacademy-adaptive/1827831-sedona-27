@@ -1,15 +1,26 @@
 .slogan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0 18px;
+}
+
+.slogan__text-divider {
+  display: none;
 }
 
 .slogan__title {
+  max-width: 484px;
+  padding-top: 32px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
   margin: 0;
-  padding-top: 32px;
 }
 
 .slogan__intro {
@@ -19,5 +30,46 @@
   text-transform: uppercase;
   color: #333333;
   text-decoration: none;
-  padding: 18px 32px;
+  padding: 37px 32px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .slogan::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/rectangle.svg");
+    width: 320px;
+    height: 37px;
+    bottom: -17px;
+  }
+
+  .slogan__text-divider {
+    display: block;
+  }
+
+  .slogan__intro {
+    padding: 37px 18px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .slogan__title {
+    font-size: 21px;
+    padding-top: 48px;
+    max-width: 520px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slogan__title {
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slogan__intro {
+    padding: 29px 32px;
+  }
 }

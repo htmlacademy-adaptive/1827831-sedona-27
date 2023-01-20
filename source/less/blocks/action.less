@@ -12,14 +12,22 @@
 
 .action__title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
-  padding-top: 38px;
+  padding-top: 23px;
 }
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .action__title {
+    font-size: 30px;
+    line-height: 26px;
+    padding-top: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
   .action__title {
     font-size: 30px;
     line-height: 26px;
@@ -32,12 +40,18 @@
   text-transform: uppercase;
   color: #333333;
   text-align: center;
-  padding: 21px 18px 32px 18px;
+  padding: 2px 18px 32px 18px;
+}
+
+@media (min-width: @desktop-width) {
+  .action__description {
+    padding-top: 30px;
+  }
 }
 
 .action__search {
   background-color: #81b3d2;
-  padding: 10px;
+  padding: 16px 49px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -45,8 +59,19 @@
   color: #ffffff;
   text-decoration: none;
   width: 284px;
+  height: 58px;
   text-align: center;
   margin-bottom: 49px;
+}
+
+@media (min-width: @tablet-width) {
+  .action__search {
+    width: 459px;
+    height: 58px;
+    margin-top: 14px;
+    padding-top: 16px;
+    margin-bottom: 65px;
+  }
 }
 
 .action__search:hover {
@@ -65,5 +90,21 @@
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .action__search {
     width: 458px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .action__title {
+    padding-bottom: 10px;
+  }
+
+  .action__description {
+    padding: 0;
+    margin-bottom: 26px;
+    width: 398px;
+  }
+
+  .action__search {
+    margin-bottom: 58px;
   }
 }
