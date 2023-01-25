@@ -11,6 +11,8 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import gulpDeleteFile from 'gulp-delete-file';
+
 
 // Styles
 
@@ -23,6 +25,10 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
+    .pipe(gulpDeleteFile({
+      reg: 'source/css/style.css',
+      deleteMatch: true
+    }))
     .pipe(gulp.dest('source/css/style.css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
