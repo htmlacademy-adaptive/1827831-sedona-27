@@ -12,12 +12,12 @@ import svgstore from 'gulp-svgstore';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import gulpDeleteFile from 'gulp-delete-file';
+import {deleteSync} from 'del';
 
 
 // Styles
-
 export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+  return gulp.src('source/less/style.less', {sourcemaps: true})
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -29,14 +29,34 @@ export const styles = () => {
       reg: 'source/css/style.css',
       deleteMatch: true
     }))
-    .pipe(gulp.dest('source/css/style.css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('source/css/style.css', {sourcemaps: '.'}))
     .pipe(browser.stream());
+}
+
+// Build styles
+export const stylesBuild = () => {
+  return gulp.src('source/less/style.less', {sourcemaps: true})
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', {sourcemaps: false}))
+    .pipe(browser.stream());
+}
+
+// Copy minified styles
+export const copyMinifiedStyles = () => {
+  return gulp.src('source/css/style.css/style.min.css')
+    .pipe(gulp.dest('build/css'));
 }
 
 // HTML
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({collapseWhitespace: true }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
 
@@ -49,21 +69,21 @@ const scripts = () => {
 
 // Images
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{jpg, png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
 const copyImages = () => {
-    return gulp.src('source/img/**/*.{jpg, png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg, png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
-      webp:{}
+      webp: {}
     }))
     .pipe(gulp.dest('build/img'))
 }
@@ -98,7 +118,7 @@ const copy = (done) => {
 
 //Clean
 const clean = () => {
-  return del('build');
+  return deleteSync('build/**');
 };
 
 // Server
@@ -106,7 +126,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
@@ -124,13 +144,12 @@ const watcher = () => {
 }
 
 // Build
-
-const build = gulp.series(
-  clean,
+export const build = gulp.series(
+  // clean,
   copy,
   optimizeImages,
   gulp.parallel(
-    styles,
+    stylesBuild,
     html,
     scripts,
     svg,
@@ -140,7 +159,6 @@ const build = gulp.series(
 );
 
 // Default
-
 export default gulp.series(
   copy,
   copyImages,
@@ -153,5 +171,6 @@ export default gulp.series(
     createWebp
   ),
   gulp.series(
-    server, watcher
+    server,
+    watcher
   ));
