@@ -23,7 +23,7 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('source/css/style.css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -57,7 +57,7 @@ const copyImages = () => {
 const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg, png}')
     .pipe(squoosh({
-      webp
+      webp:{}
     }))
     .pipe(gulp.dest('build/img'))
 }
