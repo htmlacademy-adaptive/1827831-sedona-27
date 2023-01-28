@@ -14,7 +14,6 @@ import browser from 'browser-sync';
 import gulpDeleteFile from 'gulp-delete-file';
 import {deleteSync} from 'del';
 
-
 // Build styles
 export const stylesBuild = () => {
   return gulp.src('source/less/style.less', {sourcemaps: true})
@@ -39,6 +38,12 @@ export const copyMinifiedStyles = () => {
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
+}
+
+// JS
+const js = () => {
+  return gulp.src('source/*.js')
     .pipe(gulp.dest('build'));
 }
 
