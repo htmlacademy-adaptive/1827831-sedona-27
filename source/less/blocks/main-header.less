@@ -77,10 +77,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-header__link-active {
-    color: #766357;
-  }
-
   .main-header__link:hover {
     color: @blue;
   }
@@ -89,9 +85,13 @@
     color: #000000;
     opacity: 0.3;
   }
+
+  .main-header__link-active {
+    color: #766357;
+  }
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: @tablet-width - 1px) {
   .main-header__menu {
     position: absolute;
   }
@@ -142,6 +142,10 @@
     text-decoration: none;
     font-size: 14px;
     line-height: 21px;
+  }
+
+  .main-header__link-active {
+    color: #766357;
   }
 }
 

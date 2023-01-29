@@ -39,26 +39,21 @@
     background-color: @hover-blue;
   }
 
-  .social__link--vkontakte:active {
-    background-color: @active-blue;
-    opacity: 0.3;
-  }
-
   .social__link--telegram:hover {
     background-color: @hover-blue;
-  }
-
-  .social__link--telegram:active {
-    background-color: @active-blue;
-    opacity: 0.3;
   }
 
   .social__link--youtube:hover {
     background-color: @hover-blue;
   }
+}
 
-  .social__link--youtube:active {
+@media (min-width: @tablet-width) {
+  .social__link:active {
     background-color: @active-blue;
-    opacity: 0.3;
+
+    svg {
+      opacity: 0.3;
+    }
   }
 }
