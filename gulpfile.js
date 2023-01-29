@@ -149,6 +149,7 @@ export const build = gulp.series(
 
 // Default
 export default gulp.series(
+  clean,
   copy,
   copyImages,
   gulp.parallel(
