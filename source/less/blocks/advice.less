@@ -12,7 +12,7 @@
 
 @media (min-width: @tablet-width) and (max-width: 1199px) {
   .advice__item {
-    padding: 60px 33px;
+    padding: 57px 33px 35px;
   }
 
   .advice__item-content {
@@ -40,12 +40,6 @@
   text-align: center;
   list-style-type: none;
   padding: 0;
-}
-
-.advice__dummy {
-  display: none;
-  min-width: 39px;
-  height: 100%;
 }
 
 @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -103,6 +97,13 @@
   color: #333333;
   max-width: 300px;
   text-align: center;
+  padding-left: 46px;
+}
+
+@media (min-width: @tablet-width) {
+  .advice__description {
+    padding-left: 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -120,7 +121,7 @@
   .advice__list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
     padding: 0;
   }
 
@@ -130,13 +131,8 @@
 
   .advice__description {
     max-width: 100%;
-    margin-left: 7px;
-    margin-bottom: -7px;
     text-align: left;
-  }
-
-  .advice__dummy {
-    display: block;
+    margin: 0;
   }
 
   .advice__item-content {
