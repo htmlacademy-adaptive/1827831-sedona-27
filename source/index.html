@@ -10,6 +10,7 @@
   <link rel="apple-touch-icon" href="source/img/favicon-apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="../fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 <body class="page__body">
 <svg style="display: none">
@@ -83,7 +84,7 @@
   </symbol>
 </svg>
 <header class="main-header">
-  <a href="#" class="main-header__logo">
+  <a class="main-header__logo">
     <img src="./img/logo-phone.svg" width="185" height="96" alt="Логотип Седона." class="main-header__logo-image">
   </a>
   <div class="main-header__container">
@@ -93,7 +94,7 @@
     <nav id="header-menu" class="main-header__menu main-header__menu-nojs hidden">
       <ul class="main-header__item">
         <li class="main-header__section">
-          <a href="#" class="main-header__link">
+          <a href="#" class="main-header__link main-header__link-active">
             Главная
           </a>
         </li>
@@ -316,28 +317,28 @@
 <footer class="main-footer">
   <div class="main-footer__container">
     <div class="main-footer__wrapper">
-      <a class="main-footer__hashtag">
+      <a href="#" class="main-footer__hashtag">
         #visitSEDONA
       </a>
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <svg width="24" height="14" alt="ВКонтакте.">
+            <a aria-label="ВКонтакте" class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <svg width="24" height="14">
                 <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <svg width="24" height="24" alt="Телеграм.">
+            <a aria-label="Телеграм" class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <svg width="24" height="24">
                 <use xlink:href="#icon-tg"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <svg width="20" height="14" alt="Ютуб.">
+            <a aria-label="Ютуб" class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <svg width="20" height="14">
                 <use xlink:href="#icon-youtube"></use>
               </svg>
             </a>

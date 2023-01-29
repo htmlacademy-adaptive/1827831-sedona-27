@@ -111,7 +111,6 @@ const clean = (done) => {
 };
 
 // Server
-
 const server = (done) => {
   browser.init({
     server: {

@@ -75,12 +75,19 @@
   line-height: 26px;
 }
 
-.main-header__link:hover {
-  color: #766357;
-}
+@media (min-width: @tablet-width) {
+  .main-header__link-active {
+    color: #766357;
+  }
 
-.main-header__link:active {
-  color: #766357;
+  .main-header__link:hover {
+    color: @blue;
+  }
+
+  .main-header__link:active {
+    color: #000000;
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: @tablet-width) {
@@ -123,6 +130,7 @@
   .main-header__item {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     width: 100%;

@@ -1,51 +1,77 @@
-.main-image {
-  background-color: #d6e7f1;
-}
-
 @media (max-width: @mobile-width-only) {
   .main-image {
-    background: url("../img/background-image.png") no-repeat center;
+    background: url("../img/main-image-mobile.jpg") no-repeat center #d6e7f1;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 89px;
     padding-bottom: 86px;
-  }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-img-mobile2x.jpg");
-    background-size: 320px auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-image-mobile-2x.jpg");
+    }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-image::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle-mob.svg");
+    width: 320px;
+    height: 57px;
+    bottom: -226px;
   }
 }
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .main-image {
-    background: url("../img/main-image-tablet.png") no-repeat center;
+    background: url("../img/main-image-tablet.jpg") no-repeat center #d6e7f1;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 518px;
-  }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-image-2x.jpg");
-    background-size: 1200px auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-image-tablet-2x.jpg");
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .main-image::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle.svg");
+    width: 768px;
+    height: 57px;
+    bottom: -356px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-image {
-    background: url("../img/main-image-desktop.png") no-repeat center;
+    background: url("../img/main-image-desktop.jpg") no-repeat center #d6e7f1;
     background-size: cover;
     padding-bottom: 160px;
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: 518px;
-  }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-image-2x.jpg");
-    background-size: 1200px auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-image-desktop-2x.jpg");
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-image::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle-desktop.svg");
+    width: 1200px;
+    height: 57px;
+    bottom: -356px;
   }
 }
