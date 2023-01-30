@@ -14,25 +14,6 @@ import browser from 'browser-sync';
 import gulpDeleteFile from 'gulp-delete-file';
 import {deleteSync} from 'del';
 
-
-// Styles
-export const styles = () => {
-  return gulp.src('source/less/style.less', {sourcemaps: true})
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(rename('style.min.css'))
-    .pipe(gulpDeleteFile({
-      reg: 'source/css/style.css',
-      deleteMatch: true
-    }))
-    .pipe(gulp.dest('source/css/style.css', {sourcemaps: '.'}))
-    .pipe(browser.stream());
-}
-
 // Build styles
 export const stylesBuild = () => {
   return gulp.src('source/less/style.less', {sourcemaps: true})
@@ -57,6 +38,12 @@ export const copyMinifiedStyles = () => {
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
+}
+
+// JS
+const js = () => {
+  return gulp.src('source/*.js')
     .pipe(gulp.dest('build'));
 }
 
@@ -108,7 +95,8 @@ const sprite = () => {
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
-    'source/*ico',
+    'source/*.ico',
+    'source/*.webmanifest',
   ], {
     base: 'source'
   })
@@ -117,16 +105,16 @@ const copy = (done) => {
 }
 
 //Clean
-const clean = () => {
-  return deleteSync('build/**');
+const clean = (done) => {
+  deleteSync('build');
+  done();
 };
 
 // Server
-
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -138,14 +126,14 @@ const server = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-  gulp.watch('source/js/*.js').on('change', browser.reload);
+  gulp.watch('source/less/**/*.less', gulp.series(stylesBuild));
+  gulp.watch('source/*.html', gulp.series(html));
+  gulp.watch('source/js/*.js', gulp.series(js));
 }
 
 // Build
 export const build = gulp.series(
-  // clean,
+  clean,
   copy,
   optimizeImages,
   gulp.parallel(
@@ -160,10 +148,11 @@ export const build = gulp.series(
 
 // Default
 export default gulp.series(
+  clean,
   copy,
   copyImages,
   gulp.parallel(
-    styles,
+    stylesBuild,
     html,
     scripts,
     svg,

@@ -1,13 +1,20 @@
 .action {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .action__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  margin-bottom: 71px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-bottom: 61px;
+  }
+}
+
+.action__br {
+  @media (max-width: @tablet-width - 1px) {
+    display: none;
+  }
 }
 
 .action__title {
@@ -31,6 +38,7 @@
   .action__title {
     font-size: 30px;
     line-height: 26px;
+    padding-top: 34px;
   }
 }
 
@@ -40,14 +48,16 @@
   text-transform: uppercase;
   color: #333333;
   text-align: center;
-  padding: 2px 18px 32px 18px;
-}
+  padding: 4px 18px 32px 18px;
 
-@media (min-width: @desktop-width) {
-  .action__description {
-    padding-top: 30px;
+  @media (min-width: @desktop-width) {
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 9px;
   }
 }
+
 
 .action__search {
   background-color: #81b3d2;
@@ -59,37 +69,31 @@
   color: #ffffff;
   text-decoration: none;
   width: 284px;
-  height: 58px;
+  min-height: 58px;
   text-align: center;
   margin-bottom: 49px;
 }
 
 @media (min-width: @tablet-width) {
   .action__search {
+    display: table;
+    margin: 0 auto;
     width: 459px;
-    height: 58px;
-    margin-top: 14px;
-    padding-top: 16px;
-    margin-bottom: 65px;
+    min-height: 58px;
+    padding: 16px 135px;
   }
-}
 
-.action__search:hover {
-  background-color: @hover-blue;
-}
+  .action__search:hover {
+    background-color: @hover-blue;
+  }
 
-.action__search:active {
-  background-color: @hover-blue;
-  color: rgba(255, 255, 255, 0.3);
-}
+  .action__search:active {
+    background-color: @hover-blue;
+    color: rgba(255, 255, 255, 0.3);
+  }
 
-.action__search:disabled {
-  background-color: #e5e5e5;
-}
-
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
-  .action__search {
-    width: 458px;
+  .action__search:disabled {
+    background-color: #e5e5e5;
   }
 }
 
@@ -100,11 +104,9 @@
 
   .action__description {
     padding: 0;
-    margin-bottom: 26px;
-    width: 398px;
-  }
-
-  .action__search {
-    margin-bottom: 58px;
+    margin-bottom: 38px;
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

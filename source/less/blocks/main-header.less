@@ -13,6 +13,7 @@
   width: 185px;
   height: 96px;
   top: -1px;
+  z-index: 10;
 }
 
 .main-header__container {
@@ -21,11 +22,6 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.main-header__item {
-  margin: 0;
-  padding: 0;
 }
 
 @media (max-width: @tablet-width) {
@@ -66,21 +62,6 @@
   color: #766357;
 }
 
-.site-list__item {
-  @media (max-width: @mobile-width-only) {
-    position: relative;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
-    width: 100%;
-    min-height: 223px;
-    background-color: @blue;
-    padding: 0;
-    margin: 0;
-  }
-}
-
 .main-header__menu {
   width: 100%;
   background-color: @blue;
@@ -95,15 +76,22 @@
   line-height: 26px;
 }
 
-.main-header__link:hover {
-  color: #766357;
+@media (min-width: @tablet-width) {
+  .main-header__link:not(.main-header__link-active):hover {
+    color: @blue;
+  }
+
+  .main-header__link:active {
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  .main-header__link-active {
+    color: #766357;
+  }
 }
 
-.main-header__link:active {
-  color: #766357;
-}
-
-@media (max-width: @tablet-width) {
+@media (max-width: @tablet-width - 1px) {
   .main-header__menu {
     position: absolute;
   }
@@ -119,12 +107,12 @@
     list-style-type: none;
   }
 
-  .main-nav--nojs {
+  .main-header__menu-nojs {
     display: block;
     position: relative;
   }
 
-  .main-button--nojs {
+  .main-header__button-nojs {
     display: none;
   }
 }
@@ -143,7 +131,7 @@
   .main-header__item {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -156,8 +144,8 @@
     line-height: 21px;
   }
 
-  .main-header__navigation-section-margin {
-    margin-left: 20%;
+  .main-header__link-active {
+    color: #766357;
   }
 }
 
@@ -178,13 +166,27 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .main-header__section {
-    padding-left: 65px;
+    width: 20%;
+  }
+
+  .main-header__navigation-section-margin {
+    margin-left: 20%;
   }
 }
 
-/* BUTTON */
+@media (min-width: @desktop-width) {
+  .main-header__section {
+    width: 20%;
+    text-align: center;
+  }
+
+  .main-header__section:nth-child(4n+3) {
+    margin-left: 20%;
+  }
+}
+
 .main-header__button {
   position: relative;
   width: 23px;
