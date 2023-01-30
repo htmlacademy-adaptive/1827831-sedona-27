@@ -1,9 +1,5 @@
 .slogan {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   padding: 0 18px;
 }
@@ -20,7 +16,7 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .slogan__intro {
@@ -40,7 +36,9 @@
     background-image: url("../img/rectangle.svg");
     width: 320px;
     height: 37px;
-    bottom: -16px;
+    bottom: -31px;
+    left: 0;
+    z-index: 1;
   }
 
   .slogan__text-divider {
@@ -60,16 +58,21 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .slogan__intro {
+    padding: 15px 32px;
+  }
+}
+
+
 @media (min-width: @desktop-width) {
   .slogan__title {
     font-size: 21px;
     line-height: 26px;
     padding-top: 60px;
   }
-}
 
-@media (min-width: @tablet-width) {
   .slogan__intro {
-    padding: 15px 32px;
+    padding-bottom: 29px;
   }
 }

@@ -1,5 +1,7 @@
 .action {
+  width: 100%;
   text-align: center;
+  overflow: hidden;
 }
 
 .action__wrapper {
@@ -58,7 +60,6 @@
   }
 }
 
-
 .action__search {
   background-color: #81b3d2;
   padding: 16px 49px;
@@ -83,7 +84,8 @@
     padding: 16px 135px;
   }
 
-  .action__search:hover {
+  .action__search:hover,
+  .action__search:focus {
     background-color: @hover-blue;
   }
 
@@ -108,5 +110,11 @@
     width: 540px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .action__title {
+    padding-top: 19px;
   }
 }

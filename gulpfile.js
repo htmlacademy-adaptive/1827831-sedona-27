@@ -82,8 +82,8 @@ const svg = () =>
     .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
-  return gulp.src('source/img/*.svg')
-    .pipe(svgo())
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo({removeAttrs: {attrs: ['fill']}, plugins: [{removeViewBox: false,}]}))
     .pipe(svgstore({
       inlineSvg: true
     }))
