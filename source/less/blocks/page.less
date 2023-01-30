@@ -1,18 +1,19 @@
 .page__body {
   margin: 0 auto;
   font-family: "PT Sans", "Arial", sans-serif;
+  max-width: 320px;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 @media (min-width: @tablet-width) {
   .page__body {
-    width: 768px;
-    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    max-width: 768px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page__body {
-    width: 1200px;
-    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    max-width: 1200px;
   }
 }

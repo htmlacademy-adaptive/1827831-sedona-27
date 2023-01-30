@@ -16,7 +16,7 @@
   }
 
   .advice__item {
-    padding: 57px 33px 35px;
+    padding: 57px 33px 58px;
   }
 
   .advice__item-content {
@@ -50,15 +50,15 @@
   .advice__list {
     width: 768px;
     display: grid;
-    grid-template-columns: repeat(3, 256px);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: @desktop-width) {
   .advice__list {
-    width: @desktop-width;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 1fr);
     padding: 67px 0 50px;
   }
 }
@@ -80,7 +80,7 @@
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
     .advice__description {
-      padding: 0 14px;
+      padding: 0 0;
     }
   }
 
@@ -171,7 +171,13 @@
 .advice__br {
   display: none;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: block;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .advice__item-souvenir .advice__title {
+    margin-left: 14px;
   }
 }
