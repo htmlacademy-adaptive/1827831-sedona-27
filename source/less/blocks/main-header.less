@@ -77,7 +77,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-header__link:hover {
+  .main-header__link:not(.main-header__link-active):hover {
     color: @blue;
   }
 
@@ -172,14 +172,14 @@
   }
 
   .main-header__navigation-section-margin {
-    margin-left: 135px;
+    margin-left: 20%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-header__section {
-    padding-left: 65px;
     width: 20%;
+    text-align: center;
   }
 
   .main-header__section:nth-child(4n+3) {
@@ -187,7 +187,6 @@
   }
 }
 
-/* BUTTON */
 .main-header__button {
   position: relative;
   width: 23px;
